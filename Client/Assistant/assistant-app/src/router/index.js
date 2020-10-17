@@ -51,12 +51,25 @@ const routes = [
   {
     path: '/serverItem',
     name: 'serverItem',
-    component: () => import('../views/detailPages/serverItem.vue')
+    component: () => import('../views/detailPages/serverItem/serverItem.vue'),
+    redirect: '/serverItem/content',
+    children: [
+      {
+        path: 'content',
+        name: 'content',
+        component: () => import('../views/detailPages/serverItem/children/content')
+      }
+    ]
+  },
+  {
+    path: '/addServeItem',
+    name: 'addServeItem',
+    component: () => import('../views/detailPages/addServeItem/addServeItem.vue')
   },
   {
     path: '/order',
     name: 'order',
-    component: () => import('../views/detailPages/order.vue')
+    component: () => import('../views/detailPages/order/order.vue')
   }
 ]
 

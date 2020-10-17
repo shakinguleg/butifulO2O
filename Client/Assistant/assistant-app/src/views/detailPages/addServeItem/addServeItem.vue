@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import header from "../../components/header";
-import textInput from "../../components/textInput";
-import http from "../../api/http";
-import { ADD_SERVE_ITEM_URL } from "../../api/url";
+import header from "../../../components/header";
+import textInput from "../../../components/textInput";
+import http from "../../../api/http";
+import { ADD_SERVE_ITEM_URL } from "../../../api/url";
 
 export default {
   components: {
@@ -67,9 +67,9 @@ export default {
         title: this.title,
         price: this.price,
         intro: this.intro,
+        time: this.time,
       });
-      if(result.data.code==0){
-        
+      if (result.data.code == 0) {
       }
     },
   },

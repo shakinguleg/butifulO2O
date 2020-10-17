@@ -4,7 +4,7 @@
       <div class="iconfont icon-right1" @click="$router.back()"></div>
       <slot name="type"></slot>
     </div>
-    <div class="right_wrap" @click="doSomething">
+    <div class="right_wrap" @click="doSomething" v-if="doSomething">
       <slot name="option"></slot>
     </div>
   </div>
@@ -26,7 +26,6 @@ export default {
   background-color: white;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
