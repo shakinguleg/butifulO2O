@@ -1,6 +1,6 @@
 <template>
   <div class="serverItem">
-    <all-header>
+    <all-header :path="{}">
       <template v-slot:type>新增项目</template>
     </all-header>
     <div class="content">

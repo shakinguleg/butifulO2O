@@ -52,9 +52,10 @@ export default {
     numData: {
       handler(newVal) {
         //   数字有变化时重置
-        this.$refs.show_box.map((item) => {
-          item.innerText = "";
-        });
+        this.$refs.show_box.length != 0 &&
+          this.$refs.show_box.map((item) => {
+            item.innerText = "";
+          });
         var a = newVal + "";
         if (a.length >= 6) {
           // 输入完成
@@ -72,9 +73,10 @@ export default {
           }, 300);
         }
         // 重新赋值
-        Array.from(this.numData + "").map((item, index) => {
-          this.$refs.show_box[index].innerText = item;
-        });
+        this.$refs.show_box.length ==6 &&
+          Array.from(this.numData + "").map((item, index) => {
+            this.$refs.show_box[index].innerText = item;
+          });
       },
     },
   },

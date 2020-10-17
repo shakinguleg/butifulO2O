@@ -1,6 +1,6 @@
 <template>
   <div class="serverItem">
-    <all-header :doSomething="test">
+    <all-header :doSomething="test" :path="{ name: 'mine' }">
       <template v-slot:type>服务项目</template>
       <template v-slot:option>新增</template>
     </all-header>

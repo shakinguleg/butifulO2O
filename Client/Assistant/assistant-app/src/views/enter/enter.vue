@@ -1,6 +1,6 @@
 <template>
   <div class="enter">
-    <all-header></all-header>
+    <all-header :path="{}"></all-header>
     <router-view></router-view>
   </div>
 </template>
@@ -27,6 +27,4 @@ export default {
     left: 0;
   }
 }
-
-
 </style>

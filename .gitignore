@@ -3,7 +3,7 @@
 /Database/*
 /Client/Assistant/assistant-app/node_modules
 /Client/Platform/platform-app/node_modules
-
+/Client/User/user-app/node_modules
 
 /dist
 

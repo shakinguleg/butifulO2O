@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <div class="top">
+    <div class="top" @click="goServeItemDetail">
       <div class="img"></div>
       <div class="right">
         <span class="title">
@@ -39,10 +39,14 @@ export default {
       }
       this.$store.dispatch("serveItem/getList", this.item.state);
     },
-    deleteItem(){
-        this.$store.dispatch("serveItem/deleteItem",this.item.goodsId)
-        this.$store.dispatch("serveItem/getList", this.item.state);
-    }
+    deleteItem() {
+      this.$store.dispatch("serveItem/deleteItem", this.item.goodsId);
+      this.$store.dispatch("serveItem/getList", this.item.state);
+    },
+    goServeItemDetail() {
+      // 去往服务详情页
+      // this.$router.push({ name: "" });
+    },
   },
 };
 </script>

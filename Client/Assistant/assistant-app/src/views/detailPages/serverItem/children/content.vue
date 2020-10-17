@@ -1,9 +1,9 @@
 <template>
   <div class="content">
-    <div class="show_item" v-show="list.length != 0">
+    <div class="show_item" v-show="list && list.length != 0">
       <item v-for="item in list" :key="item.goodsId" :item="item"></item>
     </div>
-    <div v-show="list.length == 0">该项为空</div>
+    <div v-show="!list || list.length == 0">该项为空</div>
   </div>
 </template>
 
