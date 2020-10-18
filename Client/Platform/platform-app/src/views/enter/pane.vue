@@ -48,7 +48,7 @@ export default {
     async login() {
       var a = await http.post(
         LOGIN_URL,
-        `name=${this.account}&password=${this.password}`
+        `phone=${this.account}&password=${this.password}`
       );
       if (a.data.code == 0) {
         this.$router.replace({ name: "home" });

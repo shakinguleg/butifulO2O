@@ -5,8 +5,8 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/enter',
-    redirect: '/enter/login',
+    path: '/',
+    redirect: '/login',
     component: () => import('../views/enter/enter.vue'),
     children: [
       {
@@ -22,8 +22,8 @@ const routes = [
     ]
   },
   {
-    path: '/',
-    redirect: '/receiving',
+    path: '/main',
+    redirect: '/main/receiving',
     component: () => import('../views/main/main.vue'),
     children: [
       {

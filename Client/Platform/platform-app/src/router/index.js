@@ -12,7 +12,7 @@ const routes = [
   main,
   // 登录
   {
-    path: "/enter",
+    path: "/",
     name: "enter",
     component: enter
   }

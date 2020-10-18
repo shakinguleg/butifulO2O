@@ -1,7 +1,7 @@
 export default {
-    path: "/",
+    path: "/main",
     component: () => import('../views/main/main.vue'),
-    redirect: "/home",
+    redirect: "/main/home",
     children: [
         {
             path: "home",
