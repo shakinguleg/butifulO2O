@@ -63,6 +63,21 @@ const routes = [
     name: 'serveItem',
     component: () => import('../views/detailPage/serveItem/serveItem.vue')
   },
+  {
+    path: '/appointment',
+    name: 'appointment',
+    component: () => import('../views/detailPage/appointment/index.vue')
+  },
+  {
+    path: '/apply',
+    name: 'apply',
+    component: () => import('../views/detailPage/apply/index.vue')
+  },
+  {
+    path: '/applyFinish',
+    name: 'applyFinish',
+    component: () => import('../views/detailPage/applyFinish/index.vue')
+  },
 ]
 
 const router = new VueRouter({

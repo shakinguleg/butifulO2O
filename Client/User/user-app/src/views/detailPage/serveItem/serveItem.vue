@@ -14,7 +14,7 @@
     </div>
     <div class="bottom">
       <div class="beautify">美体师</div>
-      <span class="com">立即预约</span>
+      <span class="com" @click="appointment">立即预约</span>
     </div>
   </div>
 </template>
@@ -22,6 +22,7 @@
 <script>
 import { mapState } from "vuex";
 import header from "../../../components/header";
+import { APPOINTMENT } from "../../../global_constant";
 
 export default {
   components: {
@@ -31,6 +32,17 @@ export default {
     ...mapState({
       item: (store) => store.doorService.serveItem,
     }),
+  },
+  methods: {
+    appointment() {
+      // 立即预约
+      this.$store.dispatch("serveItem/modifyState", {
+        item_id: this.item.goodsId,
+        state: APPOINTMENT,
+      });
+      localStorage.setItem("item", JSON.stringify(this.item));
+      this.$router.push({ name: "appointment", query: { item: this.item } });
+    },
   },
   mounted() {
     this.$store.dispatch("doorService/getServeItem", {

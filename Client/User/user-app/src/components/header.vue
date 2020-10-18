@@ -15,14 +15,17 @@ export default {
   name: "all-header",
   props: {
     doSomething: Function,
-    path: Object,
+    path: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   methods: {
     go() {
       let path = this.path;
       if (Object.keys(path).length == 0) {
         this.$router.back();
-      } else {
+      } else if (Object.keys(path).length > 0) {
         this.$router.push(path);
       }
     },
@@ -39,7 +42,7 @@ export default {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 10px;
   .left_wrap {
     height: 100%;
     display: flex;

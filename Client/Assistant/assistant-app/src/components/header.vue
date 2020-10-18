@@ -39,7 +39,7 @@ export default {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 10px;
   .left_wrap {
     height: 100%;
     display: flex;
